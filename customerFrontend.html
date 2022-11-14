@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <script type="text/javascript" src="formChecker.js"></script>
+
+    </head> 
+ 
+    <body> 
+        <h1>Welcome to Hubert's Store</h1>
+        <form name="login" action="customerBackend.php" onsubmit="IDchecker(username, password);quantityChecker(ship, quantity1, quantity2, quantity3);isValid()" method="POST">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+
+
+            <h2>Select a Shipping Method</h2>
+              <input type="radio" id="ship" name="ship" value="free 7 day">
+              <label for="free 7 day">free 7 day</label><br>
+              <input type="radio" id="ship" name="ship" value="50 overnight">
+              <label for="50 overnight">$50 overnight</label><br>
+                <input type="radio" id="ship" name="ship" value="5 three day">
+              <label for="5 three day">$5 three day</label><br><br>
+
+
+        <h2>What we sell:</h2>
+
+            <label for="quantity1"><strong>Item:</strong> Scissors | <strong>Price:</strong> $4 <strong>Quantity:</strong></label>
+            <input type="number" id="quantity1" name="quantity1" min="0" value="0"><br>
+
+            <label for="quantity2"><strong>Item:</strong> Pillow | <strong>Price:</strong> $3 <strong>Quantity:</strong></label>
+            <input type="number" id="quantity2" name="quantity2" min="0" value="0"><br>
+
+            <label for="quantity3"><strong>Item:</strong> Monitor | <strong>Price:</strong> $24 <strong>Quantity:</strong></label>
+            <input type="number" id="quantity3" name="quantity3" min="0" value="0"><br><br>
+
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </form>
+
+    </body> 
+</html>
